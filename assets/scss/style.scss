@@ -1,0 +1,70 @@
+// --- fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;700;900&display=swap');
+// === / fonts
+// --- mixins
+// === / mixins
+// --- variables
+$screen_xs_max: 575px;
+$screen_sm_max: 767px;
+$screen_md_max: 991px;
+$screen_lg_max: 1199px;
+$screen_sm: 576px;
+$screen_md: 768px;
+$screen_lg: 992px;
+$screen_xl: 1200px;
+// === / variables
+// --- commons
+* {
+    box-sizing: border-box;
+}
+
+.body {
+    font-family: 'Roboto Slab', 'sans serif';
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 160%;
+    a,
+    a:hover {
+        text-decoration: none;
+        color: #fff;
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        transition: all 0.3s ease-out;
+    }
+    .container {
+        max-width: 1200px;
+    }
+}
+
+section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+// === / commons
+// --- header
+header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+// === / header
+// --- intro
+.section_intro {
+    background: linear-gradient(103.43deg, #04B181 0.87%, #0673B1 100%);
+}
+
+// === / intro
+// --- promo
+// === / promo
+// --- about
+// === / about
+// --- feedback
+// === / feedback
+// --- contacts
+// === / contacts
