@@ -20,9 +20,8 @@ $screen_xl: 1200px;
 
 .body {
     font-family: 'Roboto Slab', 'sans serif';
-    font-weight: 300;
     font-size: 20px;
-    line-height: 160%;
+    color: #232222;
     a,
     a:hover {
         text-decoration: none;
@@ -37,33 +36,208 @@ $screen_xl: 1200px;
     .container {
         max-width: 1200px;
     }
+    .btn_main {
+        display: inline-block;
+        background: #FFFFFF;
+        border-radius: 5px;
+        color: #232222;
+        padding: 13px 0;
+        min-width: 230px;
+        font-size: 18px;
+        text-align: center;
+        transition: .3s;
+        &:hover {
+            background: #09476A;
+        }
+    }
+    .section_title {
+        font-size: 40px;
+        line-height: 53px;
+        text-align: center;
+        margin-bottom: 75px;
+    }
 }
 
 section {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 75px;
+    padding-bottom: 75px;
 }
 
-// === / commons
-// --- header
 header {
     position: absolute;
+    z-index: 1;
     left: 0;
     top: 0;
     width: 100%;
 }
 
+// === / commons
+// --- header
+.header {
+    margin-top: 50px;
+    .logo {
+        font-weight: bold;
+        font-size: 20px;
+        color: #fff;
+    }
+    li+li {
+        margin-left: 30px;
+    }
+    .menu_item a {
+        font-size: 18px;
+        padding: 15px 0;
+        transition: .3s;
+        &:hover {
+            color: #09476A;
+        }
+    }
+}
+
 // === / header
 // --- intro
 .section_intro {
+    padding: 0;
     background: linear-gradient(103.43deg, #04B181 0.87%, #0673B1 100%);
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    .bg_layer {
+        @keyframes wave_intro {
+            50% {
+                transform: scaleX(1.3) scaleY(1.1);
+            }
+            100% {
+                transform: translateX(0);
+                width: 100%;
+            }
+        }
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 75%;
+        animation: wave_intro 5s infinite;
+    }
+    .intro_text {
+        color: #fff;
+        .intro_title {
+            font-weight: bold;
+            font-size: 60px;
+            span {
+                font-weight: 900;
+                color: #09476A;
+            }
+        }
+        .intro_subtitle {
+            font-size: 30px;
+            margin-top: 35px;
+            margin-bottom: 45px;
+        }
+    }
+    .image_wrap img {
+        position: absolute;
+        left: -78px;
+        bottom: -18px;
+    }
 }
 
 // === / intro
 // --- promo
+.section_promo {
+    .text_box {
+        margin-top: 75px;
+        font-weight: 300;
+        font-size: 18px;
+    }
+}
+
 // === / promo
-// --- about
-// === / about
+// --- algorithm
+.section_algorithm {
+    .algorithm_item {
+        &.light_layer {
+            background-color: #E2FCF6;
+            .item_bg {
+                top: 15px;
+            }
+        }
+        &.dark_layer {
+            background-color: #C7ECEA;
+            .item_bg {
+                bottom: 0;
+            }
+        }
+        height: 130px;
+        margin: 15px 0;
+        padding: 0 30px;
+        border-radius: 5px;
+        filter: drop-shadow(5px 5px 10px rgba(158, 213, 221, 0.3));
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        .item_bg {
+            @keyframes wave {
+                70% {
+                    transform: translateX(-50px) scale(1.7);
+                }
+                100% {
+                    transform: translateX(0) scale(1);
+                }
+            }
+            position: absolute;
+            left: 0;
+            animation: wave infinite;
+            &__01 {
+                animation-duration: 10s;
+            }
+            &__02 {
+                animation-duration: 5.3s;
+            }
+            &__03 {
+                animation-duration: 9.2s;
+            }
+            &__04 {
+                animation-duration: 7.6s;
+            }
+            &__05 {
+                animation-duration: 6.1s;
+            }
+            &__06 {
+                animation-duration: 11s;
+            }
+            &__07 {
+                animation-duration: 6.4s;
+            }
+            &__08 {
+                animation-duration: 5.3s;
+            }
+            &__09 {
+                animation-duration: 7.2s;
+            }
+            &__10 {
+                animation-duration: 9.1s;
+            }
+            &__11 {
+                animation-duration: 8s;
+            }
+        }
+        .item_num {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: rgba(255, 196, 0, 0.5);
+        }
+        .item_text {
+            position: relative;
+            font-weight: 300;
+            z-index: 1;
+        }
+    }
+}
+
+// === / algorithm
 // --- feedback
 // === / feedback
 // --- contacts
