@@ -22,6 +22,9 @@ $(document).ready(function() {
     //     e.preventDefault();
     //     $('body').toggleClass('menu_active')
     // });
-
+    $('.menu_toggle').click(function(e) {
+        e.preventDefault();
+        $(this).toggleClass('active');
+    });
 
 });
