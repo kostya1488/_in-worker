@@ -24,7 +24,6 @@ $(document).ready(function() {
     // });
     $('.menu_toggle').click(function(e) {
         e.preventDefault();
-        $(this).toggleClass('active');
+        $('.header, body').toggleClass('menu_active');
     });
-
 });

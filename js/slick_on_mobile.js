@@ -1,16 +1,32 @@
 $(document).ready(function() {
-    $slick_slider = $('.class');
-    settings_slider = {
-        centerMode: true,
-        dots: true,
-        variableWidth: true,
+    $slick_slider = $('.slider_algorithm');
+
+    $settings_slider = {
         infinite: false,
-        centerPadding: '70px',
+        focusOnSelect: true,
+        variableWidth: true,
         slidesToShow: 1,
-        initialSlide: 1,
+        initialSlide: 0,
+        arrows: false,
+        // responsive: [{
+        //         breakpoint: 320,
+        //         settings: {
+        //             centerMode: true,
+        //             slidesToShow: 1,
+        //             variableWidth: true,
+        //         }
+        //     },
+        //     {
+        //         breakpoint: 576,
+        //         settings: {
+        //             centerMode: true,
+        //             slidesToShow: 2
+        //         }
+        //     }
+        // ]
     }
 
-    slick_on_mobile($slick_slider, settings_slider);
+    slick_on_mobile($slick_slider, $settings_slider);
 })
 
 function slick_on_mobile(slider, settings) {

@@ -12,6 +12,9 @@
 
     <!-- Bootstrap CSS only -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- slick slider -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
 </head>
 
 <body class="body">
@@ -19,25 +22,24 @@
     <header id="header" class="header">
         <div class="container">
             <div class="row align-items-center justify-content-between">
-                <div class="col-3">
+                <div class="col-6 col-sm-3">
                     <a href="index.html" class="logo">
                         IN-WORKER
                     </a>
                 </div>
-                <div class="col-9 col-xl-7">
-                    <div class="menu_toggle d-flex flex-column justify-content-between d-lg-none">
-                        <div class="item_top d-flex">
+                <div class="col-6 col-sm-3 col-lg-9 col-xl-7 d-flex justify-content-end">
+                    <div class="menu_toggle d-lg-none">
+                        <div class="item_top">
                             <div class="toggle_item item_l"></div>
                             <div class="toggle_item item_r"></div>
                         </div>
                         <div class="item_mid toggle_item w-100"></div>
-                        <div class="item_bot d-flex">
+                        <div class="item_bot">
                             <div class="toggle_item item_l"></div>
                             <div class="toggle_item item_r"></div>
                         </div>
-
                     </div>
-                    <ul class="menu d-flex justify-content-end">
+                    <ul class="menu">
                         <li class="menu_item">
                             <a href="#" class="nav_link">
                                 О нас
@@ -71,15 +73,16 @@
     <!-- header -->
     <!-- intro -->
     <section id="intro" class="section_intro d-flex align-items-center">
-        <img class="bg_layer" src="assets/img/intro_bg_layer.png" alt="">
+        <img class="bg_layer d-sm-none" src="assets/img/intro_bg_layer_mobile.png" alt="">
+        <img class="bg_layer d-none d-sm-inline" src="assets/img/intro_bg_layer.png" alt="">
         <div class="container">
             <div class="row d-flex">
-                <div class="col-10 col-xl-8">
+                <div class="col-lg-10 col-xl-8 order-1">
                     <div class="intro_text">
                         <div class="intro_title">
-                            Рекрутинговое агентство <span>IN-WORKER</span>
+                            Рекрутинговое агентство <br class="d-sm-none"> <span>IN-WORKER</span>
                         </div>
-                        <div class="intro_subtitle pl-0 col-9">
+                        <div class="intro_subtitle pl-0 col-sm-6 col-lg-9">
                             Позвольте нам найти лучшего кандидата для вашей вакансии
                         </div>
                         <div class="intro_button">
@@ -89,7 +92,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-4">
+                <div class="col-xl-4 order-0 order-sm-2">
                     <div class="image_wrap">
                         <img src="assets/img/intro.png" alt="" class="intro_back">
                         <img src="assets/img/intro_people.png" alt="" class="intro_front">
@@ -103,20 +106,20 @@
     <section id="promo" class="section_promo">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-8 mb-0 p-0 section_title">
+                <div class="col-11 col-sm-8 mb-0 p-0 section_title">
                     Эксклюзивный подбор персонала и профессиональная оценка кандидатов
                 </div>
             </div>
             <div class="row">
-                <div class="col-xl-5 pr-0">
+                <div class="col-xl-5 pr-lg-0">
                     <div class="text_box">
                         Компания «GOLDEN STAFF» успешно работает на рынке рекрутинговых услуг в Киеве и Украине, начиная с 1998 года. За годы работы компания разработала и внедрила целостный комплекс методик подбора и профессиональной оценки персонала, а также сформировала команду
                         высококлассных профессионалов сферы найма. Успешный опыт реализации многочисленных рекрутинговых проектов, сформированная команда, запатентованные авторские методики оценки дают возможность максимально качественного и оперативного
                         закрытия самых сложных вакансий.
                     </div>
                 </div>
-                <div class="col-xl-7 text-center">
-                    <img src="assets/img/promo.png" alt="">
+                <div class="col-xl-7 text-center mt-5 mt-lg-0">
+                    <img src="assets/img/promo.png" alt="" class="w-75">
                 </div>
             </div>
         </div>
@@ -131,8 +134,8 @@
                     Алгоритм работы
                 </div>
             </div>
-            <div class="row">
-                <div class="col-4">
+            <div class="row slider_algorithm">
+                <div class="col-lg-4">
                     <div class="algorithm_item light_layer">
                         <div class="item_num">
                             01
@@ -143,7 +146,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-lg-4">
                     <div class="algorithm_item light_layer">
                         <div class="item_num">
                             02
@@ -154,7 +157,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-lg-4">
                     <div class="algorithm_item light_layer">
                         <div class="item_num">
                             03
@@ -165,7 +168,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-lg-4">
                     <div class="algorithm_item dark_layer">
                         <div class="item_num">
                             04
@@ -176,7 +179,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-lg-4">
                     <div class="algorithm_item dark_layer">
                         <div class="item_num">
                             05
@@ -187,7 +190,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-lg-4">
                     <div class="algorithm_item light_layer">
                         <div class="item_num">
                             06
@@ -198,7 +201,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-lg-4">
                     <div class="algorithm_item light_layer">
                         <div class="item_num">
                             07
@@ -209,7 +212,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-lg-4">
                     <div class="algorithm_item light_layer">
                         <div class="item_num">
                             08
@@ -220,7 +223,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-lg-4">
                     <div class="algorithm_item dark_layer">
                         <div class="item_num">
                             09
@@ -231,7 +234,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-lg-4">
                     <div class="algorithm_item dark_layer">
                         <div class="item_num">
                             10
@@ -242,7 +245,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-lg-4">
                     <div class="algorithm_item light_layer">
                         <div class="item_num">
                             11
@@ -264,7 +267,7 @@
                 <div class="section_title">Специализация</div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-10">
+                <div class="col-lg-10">
                     <div class="specialization_text mt-0">
                         Поручая поиск сотрудников профессионалам рекрутингового агентства, Вы получаете доступ к нашей обширной собственной базе кандидатов. Если Вас интересуют узкопрофильные специалисты, профессионалы с уникальным опытом работы – рекрутеры «GOLDEN STAFF» проведут
                         необходимое исследование рынка и оперативно предоставят Вам списки кандидатов, пользуясь методами прямого поиска персонала и хедхантинга.
@@ -272,7 +275,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-4">
+                <div class="col-sm-6 col-lg-4">
                     <div class="specialization_item specialization_item__01">
                         <img src="assets/img/section_specialization/cloud_01.png" alt="" class="cloud_image">
                         <img src="assets/img/section_specialization/mount_01.png" alt="" class="mount_image">
@@ -281,7 +284,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-sm-6 col-lg-4">
                     <div class="specialization_item specialization_item__02">
                         <img src="assets/img/section_specialization/cloud_02.png" alt="" class="cloud_image">
                         <img src="assets/img/section_specialization/mount_02.png" alt="" class="mount_image">
@@ -290,7 +293,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-sm-6 col-lg-4">
                     <div class="specialization_item specialization_item__03">
                         <img src="assets/img/section_specialization/cloud_03.png" alt="" class="cloud_image">
                         <img src="assets/img/section_specialization/mount_03.png" alt="" class="mount_image">
@@ -299,7 +302,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-sm-6 col-lg-4">
                     <div class="specialization_item specialization_item__04">
                         <img src="assets/img/section_specialization/cloud_04.png" alt="" class="cloud_image">
                         <img src="assets/img/section_specialization/mount_04.png" alt="" class="mount_image">
@@ -308,7 +311,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-sm-6 col-lg-4">
                     <div class="specialization_item specialization_item__05">
                         <img src="assets/img/section_specialization/cloud_05.png" alt="" class="cloud_image">
                         <img src="assets/img/section_specialization/mount_05.png" alt="" class="mount_image">
@@ -317,7 +320,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-sm-6 col-lg-4">
                     <div class="specialization_item specialization_item__06">
                         <img src="assets/img/section_specialization/cloud_06.png" alt="" class="cloud_image">
                         <img src="assets/img/section_specialization/mount_06.png" alt="" class="mount_image">
@@ -328,7 +331,7 @@
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-10">
+                <div class="col-sm-10">
                     <div class="specialization_text mb-0">
                         <p> GOLDEN STAFF - экспертность, эффективность, вовлеченность.
                         </p>
@@ -345,17 +348,18 @@
     <!-- / specialization -->
     <!-- search_method -->
     <section id="search_method" class="section_search_method">
-        <img src="assets/img/search_method_bg_layer.png" alt="" class="search_method_bg_image">
-
+        <img src="assets/img/search_method_bg_layer.png" alt="" class="search_method_bg_image d-none d-sm-inline">
+        <img src="assets/img/search_method_bg_layer_mobile2.png" alt="" class="search_method_bg_image d-sm-none">
+        <img src="assets/img/search_method_bg_layer_mobile.png" alt="" class="search_method_bg_image d-sm-none">
         <div class="container">
             <img src="assets/img/search_method.png" alt="" class="search_method_image">
             <div class="row justify-content-center">
-                <div class="col-7 section_title text-center">
+                <div class="col-sm-7 section_title text-center">
                     Методология поиска и отбора кандидатов
                 </div>
             </div>
-            <div class="row" style="justify-content: space-evenly;">
-                <div class="col-5">
+            <div class="row justify-content-center justify-content-sm-start">
+                <div class="col-10 col-sm-5 col-lg-5">
                     <ul class="search_method_list">
                         <div class="list_title">
                             Поиск
@@ -367,14 +371,14 @@
                         <li><span>05/</span>Специализированные мероприятия</li>
                     </ul>
                 </div>
-                <div class="col-5">
-                    <ul class="search_method_list">
+                <div class="col-10 col-sm-6 col-lg-5">
+                    <ul class="search_method_list search_method_list__2">
                         <div class="list_title">
                             Отбор
                         </div>
                         <li><span>01/</span>FaceReader</li>
                         <li><span>02/</span>Глубинное интервью</li>
-                        <li><span>03/</span>Вопросы: проективные, case-вопросы</li>
+                        <li><span>03/</span>Вопросы: <br> - проективные, <br> - case-вопросы</li>
                         <li><span>04/</span>Интервью по компетенциям</li>
                         <li><span>05/</span>Методика Hogan</li>
                     </ul>
@@ -389,9 +393,9 @@
             <div class="row justify-content-center">
                 <div class="section_title">Почему нас выбирают</div>
             </div>
-            <div class="row">
-                <div class="col-3">
-                    <div class="advantages_item">
+            <div class="row justify-content-center">
+                <div class="col-10 col-sm-6 col-lg-3">
+                    <div class="advantages_item mt-0">
                         <div class="advantages_icon">
                             <img src="assets/img/svg/checked.svg" alt="">
                         </div>
@@ -403,8 +407,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-3">
-                    <div class="advantages_item">
+                <div class="col-10 col-sm-6 col-lg-3">
+                    <div class="advantages_item mt-sm-0">
                         <div class="advantages_icon">
                             <img src="assets/img/svg/shield.svg" alt="">
                         </div>
@@ -416,7 +420,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-3">
+                <div class="col-10 col-sm-6 col-lg-3">
                     <div class="advantages_item">
                         <div class="advantages_icon">
                             <img src="assets/img/svg/pulse.svg" alt="">
@@ -429,7 +433,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-3">
+                <div class="col-10 col-sm-6 col-lg-3">
                     <div class="advantages_item">
                         <div class="advantages_icon">
                             <img src="assets/img/svg/user.svg" alt="">
@@ -448,22 +452,23 @@
     <!-- / advantages -->
     <!-- feedback -->
     <section id="feedback" class="section_feedback">
-        <img src="assets/img/feedback_bg_layer.png" alt="" class="feedback_bg_layer">
+        <img src="assets/img/feedback_bg_layer_mobile.png" alt="" class="feedback_bg_layer d-sm-none">
+        <img src="assets/img/feedback_bg_layer.png" alt="" class="feedback_bg_layer d-none d-sm-inline">
         <div class="container">
-            <div class="row justify-content-around">
-                <div class="col-5">
+            <div class="row justify-content-center justify-content-lg-around">
+                <div class="col-sm-7 col-lg-5">
                     <div class="section_title">
                         Обращайтесь, будем рады сотрудничеству!
                     </div>
                 </div>
-                <div class="col-4"></div>
+                <div class="col-lg-4"></div>
             </div>
             <div class="row justify-content-around">
-                <div class="col-6 col-xl-5">
+                <div class="col-11 col-lg-6 col-xl-5">
                     <form action="" class="">
-                        <div class="w-100 d-flex justify-content-between">
-                            <input type="text" class="input" placeholder="Имя">
-                            <input type="text" class="input" placeholder="Телефон">
+                        <div class="w-100 d-sm-flex justify-content-between">
+                            <input type="text" class="input mr-sm-2" placeholder="Имя">
+                            <input type="text" class="input ml-sm-2" placeholder="Телефон">
                         </div>
                         <input type="text" class="w-100" placeholder="E-mail">
                         <input type="text" class="w-100" placeholder="Компания">
@@ -473,9 +478,9 @@
                         </div>
                     </form>
                 </div>
-                <div class="col-4">
-                    <div class="contacts_text mt-0">
-                        <div class="contacts_title"> Контактная информация: </div>
+                <div class="col-11 col-lg-4 d-sm-flex justify-content-around d-lg-block">
+                    <div class="contacts_text mt-lg-0">
+                        <div class="contacts_title"> Контактная <br class="d-xl-none"> информация: </div>
                         <ul>
                             <li><a href="tel:+">+38 (067) 441-05-51</a></li>
                             <li><a href="tel:+">+38 (067) 441-05-51</a></li>
@@ -500,6 +505,10 @@
 
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+
+    <script src="js/slick_on_mobile.js"></script>
     <script src="js/script.js"></script>
 </body>
 
