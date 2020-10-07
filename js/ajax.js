@@ -14,13 +14,15 @@ function sendAjaxForm(ajax_form, url) {
         dataType: "html",
         data: $("#" + ajax_form).serialize(),
         success: function(response) {
-            result = $.parseJSON(response);
-            alert("Well done");
+            form_send("Анкета <br> отправлена")
         },
         error: function(response) {
-            alert("error");
-
+            form_send("Произошла <br> ошибка")
         }
     });
+}
 
+function form_send(resp_text) {
+    $('.response').html(resp_text);
+    $('.form_wrap').addClass('form_send');
 }

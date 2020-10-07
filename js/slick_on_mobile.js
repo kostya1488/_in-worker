@@ -8,22 +8,6 @@ $(document).ready(function() {
         slidesToShow: 1,
         initialSlide: 0,
         arrows: false,
-        // responsive: [{
-        //         breakpoint: 320,
-        //         settings: {
-        //             centerMode: true,
-        //             slidesToShow: 1,
-        //             variableWidth: true,
-        //         }
-        //     },
-        //     {
-        //         breakpoint: 576,
-        //         settings: {
-        //             centerMode: true,
-        //             slidesToShow: 2
-        //         }
-        //     }
-        // ]
     }
 
     slick_on_mobile($slick_slider, $settings_slider);

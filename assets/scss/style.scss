@@ -88,9 +88,13 @@ section {
     padding-top: 100px;
     padding-bottom: 100px;
     overflow: hidden;
-    @media (max-width: $screen_md_max) {
+    @media (min-width: $screen_sm) and (max-width: $screen_md_max) {
         padding-top: 75px;
         padding-bottom: 75px;
+    }
+    @media (max-width: $screen_xs_max) {
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
 }
 
@@ -346,15 +350,15 @@ header {
         .image_wrap {
             position: absolute;
             left: 50%;
-            top: 170px;
+            top: 195px;
             margin-left: -5px;
             .intro_back {
-                width: 200px;
+                width: 250px;
                 left: 50%;
-                margin-left: -100px;
+                margin-left: -125px;
             }
             .intro_front {
-                width: 50px;
+                width: 68px;
                 left: 0;
             }
         }
@@ -379,6 +383,7 @@ header {
         }
     }
     @media (max-width: $screen_xs_max) {
+        padding-bottom: 25px;
         .text_box {
             font-size: 16px;
         }
@@ -465,6 +470,7 @@ header {
         }
         .item_text {
             position: relative;
+            font-size: 20px;
             font-weight: 300;
             z-index: 1;
         }
@@ -620,7 +626,7 @@ header {
     }
     .search_method_image {
         position: absolute;
-        right: 203px;
+        right: 0px;
         top: 163px;
     }
     .section_title {
@@ -679,7 +685,7 @@ header {
             right: 50%;
             margin-right: -150px;
             width: 300px;
-            top: 650px;
+            top: 570px;
         }
     }
 }
@@ -732,37 +738,79 @@ header {
         bottom: 0;
         width: 100%;
     }
-    form {
-        input,
-        textarea,
-        button {
-            display: block;
-            background: none;
-            border: none;
-            outline: none;
-            color: #fff;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 5px;
-            padding: 12px 20px;
-            margin-bottom: 20px;
-            &::placeholder {
-                color: rgba(255, 255, 255, 0.459);
+    .form_wrap {
+        position: relative;
+        form {
+            transition: 1s;
+            input,
+            textarea,
+            button {
+                display: block;
+                background: none;
+                border: none;
+                outline: none;
+                color: #fff;
+                border: 1px solid rgba(255, 255, 255, 0.3);
+                border-radius: 5px;
+                padding: 12px 20px;
+                margin-bottom: 20px;
+                &::placeholder {
+                    color: rgba(255, 255, 255, 0.459);
+                    font-size: 18px;
+                }
+            }
+            textarea {
+                resize: none;
+            }
+            button {
+                border: 1px solid rgba(255, 255, 255, 0);
+                margin-top: 30px;
+                background: #1C8BB1;
+                min-width: 230px;
                 font-size: 18px;
+                transition: .3s;
+                &:hover {
+                    background: none;
+                    border: 1px solid rgba(255, 255, 255, 0.3);
+                }
+            }
+            .input {
+                width: 100%;
+                min-width: 226px;
             }
         }
-        textarea {
-            resize: none;
-        }
-        button {
-            border: none;
-            margin-top: 30px;
-            background: #1C8BB1;
-            min-width: 230px;
-            font-size: 18px;
-        }
-        .input {
+        .response {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -50%;
+            margin-top: -30%;
             width: 100%;
-            min-width: 226px;
+            height: 60%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            font-size: 30px;
+            transform: rotateX(-90deg);
+            opacity: 0;
+            visibility: hidden;
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+        &.form_send {
+            form {
+                transform: rotateX(90deg);
+                opacity: 0;
+                visibility: hidden;
+            }
+            .response {
+                transition-duration: 1s;
+                transition-delay: 1s;
+                transform: rotateX(0deg);
+                opacity: 1;
+                visibility: visible;
+            }
         }
     }
     .contacts_text {
@@ -801,6 +849,12 @@ header {
     @media (max-width: $screen_xs_max) {
         footer {
             margin-top: 50px;
+        }
+        .feedback_bg_layer {
+            height: 77%;
+        }
+        .form_wrap .response {
+            margin-top: -50%;
         }
     }
 }
