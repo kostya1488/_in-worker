@@ -26,8 +26,7 @@ isset($_POST["massage"])
     echo json_encode($result); 
 
     foreach ($result as $key => $value) {
-        $txt_for_mail .= $key . ": " . $value ."\n";npm install sass-autoprefixer
-
+        $txt_for_mail .= $key . ": " . $value ."\n";
  }
 
   mail($to, $subject, $txt_for_mail, $headers);
