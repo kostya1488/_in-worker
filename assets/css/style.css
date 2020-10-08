@@ -124,7 +124,7 @@ header {
         width: 50%;
         height: 2px;
         background-color: #fff;
-        transition: .3s; }
+        transition: .5s; }
       .header .menu_toggle .item_top,
       .header .menu_toggle .item_bot {
         display: flex; }
