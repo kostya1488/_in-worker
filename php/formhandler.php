@@ -1,7 +1,7 @@
 <?php
 $to = "mail@in-worker.net.ua";
 $subject = "Заявка с сайта";
-$headers = "From: message@feleton.com";
+$headers = "From: message@in-worker.net.ua";
 
 if (
 
@@ -26,7 +26,8 @@ isset($_POST["massage"])
     echo json_encode($result); 
 
     foreach ($result as $key => $value) {
-        $txt_for_mail .= $key . ": " . $value ."\n";
+        $txt_for_mail .= $key . ": " . $value ."\n";npm install sass-autoprefixer
+
  }
 
   mail($to, $subject, $txt_for_mail, $headers);
